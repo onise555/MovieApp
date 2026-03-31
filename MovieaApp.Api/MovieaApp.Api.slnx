@@ -1,3 +1,6 @@
 <Solution>
   <Project Path="MovieaApp.Api/MovieaApp.Api.csproj" />
+  <Project Path="MovieApp.Api.Application/MovieApp.Api.Application.csproj" />
+  <Project Path="MovieApp.Api.Domain/MovieApp.Api.Domain.csproj" />
+  <Project Path="MovieApp.Api.Infrastructure/MovieApp.Api.Infrastructure.csproj" />
 </Solution>
