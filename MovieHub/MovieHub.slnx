@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="MovieHub.Application/MovieHub.Application.csproj" />
+  <Project Path="MovieHub.Domain/MovieHub.Domain.csproj" />
+  <Project Path="MovieHub.Infrastructure/MovieHub.Infrastructure.csproj" />
+  <Project Path="MovieHub/MovieHub.csproj" />
+</Solution>
