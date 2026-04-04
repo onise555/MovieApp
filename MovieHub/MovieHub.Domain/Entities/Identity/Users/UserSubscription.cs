@@ -1,5 +1,7 @@
-﻿using MovieHub.Domain.Common;
-using MovieHub.Domain.Entities.Identity.Users;
+using MovieHub.Domain.Common;
+using MovieHub.Domain.Enums.User;
+
+namespace MovieHub.Domain.Entities.Identity.Users;
 
 public class UserSubscription : BaseEntity
 {

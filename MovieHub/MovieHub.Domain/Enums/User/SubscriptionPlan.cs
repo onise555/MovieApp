@@ -1,7 +1,9 @@
-﻿public enum SubscriptionPlan
+namespace MovieHub.Domain.Enums.User;
+
+public enum SubscriptionPlan
 {
     Free = 1,
     Basic = 2,
     Standard = 3,
-    Premium = 4,    
+    Premium = 4,
 }

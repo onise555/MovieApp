@@ -1,5 +1,7 @@
-﻿using MovieHub.Domain.Common;
-using MovieHub.Domain.Entities.Cinema.Series;
+using MovieHub.Domain.Common;
+using MovieHub.Domain.Entities.Cinema.Medias.SerieMedia;
+
+namespace MovieHub.Domain.Entities.Cinema.Series;
 
 public class SeriesDetail : BaseEntity
 {

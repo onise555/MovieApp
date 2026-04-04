@@ -1,6 +1,8 @@
-﻿using MovieHub.Domain.Common;
+using MovieHub.Domain.Common;
 using MovieHub.Domain.Entities.Cinema.Series;
 using MovieHub.Domain.Entities.Features;
+
+namespace MovieHub.Domain.Entities.Cinema.Medias.SerieMedia;
 
 public class EpisodeSubtitle : BaseEntity
 {

@@ -1,7 +1,10 @@
-﻿using MovieHub.Domain.Common;
+using MovieHub.Domain.Common;
 using MovieHub.Domain.Entities.Activities.History;
+using MovieHub.Domain.Entities.Activities.Lists;
+using MovieHub.Domain.Entities.Activities.Reviews;
 using MovieHub.Domain.Entities.Features;
 using MovieHub.Domain.Entities.System;
+using MovieHub.Domain.Enums.Cinema;
 
 namespace MovieHub.Domain.Entities.Cinema.Movies;
 
@@ -31,15 +34,15 @@ public class Movie : AuditableEntity, ISoftDelete
     public Movie? Prequel { get; set; }
 
     public MovieDetail Detail { get; set; } = null!;
-    public List<UserListItem> UserListItems { get; set; }= new List<UserListItem>(); 
+    public List<UserListItem> UserListItems { get; set; } = new List<UserListItem>();
     public List<Review> Reviews { get; set; } = [];
     public List<WatchingHistory> WatchingHistories { get; set; } = new List<WatchingHistory>();
     public List<ContentReport> Reports { get; set; } = new List<ContentReport>();
-    public List<Actor> Actors { get; set; } = new List<Actor>  ();
+    public List<Actor> Actors { get; set; } = new List<Actor>();
     public List<Genre> Genres { get; set; } = new List<Genre>();
     public List<Country> Countries { get; set; } = new List<Country>();
     public List<ContentTag> Tags { get; set; } = new List<ContentTag>();
-    public  List<Notification> Notifications { get; set; } = new List<Notification>();
+    public List<Notification> Notifications { get; set; } = new List<Notification>();
 
     private const double ViewWeight = 0.4;
     private const double RatingWeight = 0.4;

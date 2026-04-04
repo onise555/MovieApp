@@ -1,5 +1,8 @@
-﻿using MovieHub.Domain.Common;
+using MovieHub.Domain.Common;
 using MovieHub.Domain.Entities.Identity.Users;
+using MovieHub.Domain.Enums.Activities;
+
+namespace MovieHub.Domain.Entities.Activities.Lists;
 
 public class UserList : AuditableEntity, ISoftDelete
 {

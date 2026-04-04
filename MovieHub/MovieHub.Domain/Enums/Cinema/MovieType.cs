@@ -1,4 +1,6 @@
-﻿public enum MovieType
+namespace MovieHub.Domain.Enums.Cinema;
+
+public enum MovieType
 {
     Movie = 1,
     AnimeMovie = 2,

@@ -3,6 +3,8 @@ using MovieHub.Domain.Entities.Cinema.Movies;
 using MovieHub.Domain.Entities.Cinema.Series;
 using MovieHub.Domain.Entities.Identity.Users;
 
+namespace MovieHub.Domain.Entities.Activities.Reviews;
+
 public class Review : AuditableEntity, ISoftDelete
 {
     public int Rating { get; set; }

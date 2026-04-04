@@ -1,6 +1,8 @@
-﻿public enum ReportReason
+namespace MovieHub.Domain.Enums.System;
+
+public enum ReportReason
 {
-    BrokenLink = 1, 
+    BrokenLink = 1,
     WrongSubtitle = 2,
     WrongInfo = 3,
     AudioIssue = 4,

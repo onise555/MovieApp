@@ -1,8 +1,8 @@
-﻿using MovieHub.Domain.Common;
-
-using MovieHub.Domain.Entities.Identity.Users;
+using MovieHub.Domain.Common;
 using MovieHub.Domain.Entities.Cinema.Movies;
 using MovieHub.Domain.Entities.Cinema.Series;
+using MovieHub.Domain.Entities.Identity.Users;
+using MovieHub.Domain.Enums.System;
 
 namespace MovieHub.Domain.Entities.System;
 

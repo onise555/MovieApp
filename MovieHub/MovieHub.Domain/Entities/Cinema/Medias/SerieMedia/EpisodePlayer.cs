@@ -1,6 +1,9 @@
-﻿using MovieHub.Domain.Common;
+using MovieHub.Domain.Common;
 using MovieHub.Domain.Entities.Cinema.Series;
 using MovieHub.Domain.Entities.Features;
+using MovieHub.Domain.Enums.Cinema;
+
+namespace MovieHub.Domain.Entities.Cinema.Medias.SerieMedia;
 
 public class EpisodePlayer : BaseEntity
 {

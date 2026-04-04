@@ -1,4 +1,5 @@
-﻿using MovieHub.Domain.Common;
+using MovieHub.Domain.Common;
+using MovieHub.Domain.Entities.Cinema.Medias.MovieMedia;
 
 namespace MovieHub.Domain.Entities.Cinema.Movies;
 
@@ -8,8 +9,6 @@ public class MovieDetail : BaseEntity
     public string Director { get; set; } = string.Empty;
     public int DurationMinutes { get; set; }
     public string? TrailerYoutubeKey { get; set; }
-
-
 
     public int MovieId { get; set; }
     public Movie Movie { get; set; } = null!;

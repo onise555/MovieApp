@@ -1,5 +1,6 @@
-﻿using MovieHub.Domain.Common;
+using MovieHub.Domain.Common;
 using MovieHub.Domain.Entities.Activities.History;
+using MovieHub.Domain.Entities.Cinema.Medias.SerieMedia;
 
 namespace MovieHub.Domain.Entities.Cinema.Series;
 
