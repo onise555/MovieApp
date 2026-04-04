@@ -6,10 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Entities\Activities\Community\" />
-    <Folder Include="Entities\Activities\Library\" />
-    <Folder Include="Entities\Cinema\Series\" />
-  </ItemGroup>
-
 </Project>

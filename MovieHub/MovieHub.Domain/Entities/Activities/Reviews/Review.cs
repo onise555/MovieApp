@@ -1,12 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MovieHub.Domain.Common;
+using MovieHub.Domain.Entities.Cinema.Movies;
+using MovieHub.Domain.Entities.Cinema.Series;
+using MovieHub.Domain.Entities.Identity.Users;
 
-namespace MovieHub.Domain.Entities.Activities.Reviews
+public class Review : AuditableEntity, ISoftDelete
 {
-    internal class Review
-    {
-    }
+    public int Rating { get; set; }
+    public string Comment { get; set; } = string.Empty;
+    public int UserId { get; set; }
+    public int? MovieId { get; set; }
+    public int? SeriesId { get; set; }
+    public bool IsDeleted { get; set; } = false;
+    public DateTime? DeletedAt { get; set; }
+
+    public bool IsValid => MovieId.HasValue != SeriesId.HasValue;
+
+    public User User { get; set; } = null!;
+    public Movie? Movie { get; set; }
+    public Serie? Series { get; set; }
+
+    public ICollection<ReviewLike> Likes { get; set; } = [];
 }

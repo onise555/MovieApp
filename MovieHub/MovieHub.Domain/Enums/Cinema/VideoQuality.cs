@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MovieHub.Domain.Enums.Cinema
+﻿public enum VideoQuality
 {
-    internal class VideoQuality
-    {
-    }
+    SD = 1 ,
+    HD = 2,
+    FullHD = 3,
+    UHD = 4,    
 }

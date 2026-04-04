@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MovieHub.Domain.Common;
+using MovieHub.Domain.Entities.Identity.Users;
 
-namespace MovieHub.Domain.Entities.Identity.Users
+public class UserSubscription : BaseEntity
 {
-    internal class UserSubscription
-    {
-    }
+    public SubscriptionPlan Plan { get; set; } = SubscriptionPlan.Free;
+    public DateTime StartsAt { get; set; }
+    public DateTime ExpiresAt { get; set; }
+    public bool IsActive { get; set; } = true;
+    public int MaxDevices { get; set; } = 1;
+    public int UserId { get; set; }
+    public User User { get; set; } = null!;
 }

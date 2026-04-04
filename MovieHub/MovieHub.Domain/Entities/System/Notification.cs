@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MovieHub.Domain.Common;
 
-namespace MovieHub.Domain.Entities.System
+using MovieHub.Domain.Entities.Identity.Users;
+using MovieHub.Domain.Entities.Cinema.Movies;
+using MovieHub.Domain.Entities.Cinema.Series;
+
+namespace MovieHub.Domain.Entities.System;
+
+public class Notification : BaseEntity
 {
-    internal class Notification
-    {
-    }
+    public string Message { get; set; } = string.Empty;
+    public NotificationType Type { get; set; }
+    public bool IsRead { get; set; } = false;
+    public DateTime CreatedAt { get; set; }
+    public int UserId { get; set; }
+    public int? MovieId { get; set; }
+    public int? SeriesId { get; set; }
+
+    public User User { get; set; } = null!;
+    public Movie? Movie { get; set; }
+    public Serie? Series { get; set; }
 }

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MovieHub.Domain.Enums.Cinema
+﻿public enum ContentStatus
 {
-    internal class ContentStatus
-    {
-    }
+    Released = 1,
+    ComingSoon = 2,
+    Ongoing = 3,
+    Cancelled= 4,
 }

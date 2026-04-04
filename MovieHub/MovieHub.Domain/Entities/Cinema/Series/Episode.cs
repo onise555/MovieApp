@@ -1,12 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MovieHub.Domain.Common;
+using MovieHub.Domain.Entities.Activities.History;
 
-namespace MovieHub.Domain.Entities.Cinema.Series
+namespace MovieHub.Domain.Entities.Cinema.Series;
+
+public class Episode : AuditableEntity, ISoftDelete
 {
-    internal class Episode
-    {
-    }
+    public int EpisodeNumber { get; set; }
+    public string EpisodeName { get; set; } = string.Empty;
+    public int DurationMinutes { get; set; }
+    public string? ThumbnailUrl { get; set; }
+    public string? Description { get; set; }
+    public DateTime? AirDate { get; set; }
+    public bool IsFillerEpisode { get; set; } = false;
+    public string? ArcName { get; set; }
+    public int? IntroStartSeconds { get; set; }
+    public int? IntroEndSeconds { get; set; }
+    public int? OutroStartSeconds { get; set; }
+    public int? OutroEndSeconds { get; set; }
+    public int? NextEpisodeId { get; set; }
+    public bool IsDeleted { get; set; } = false;
+    public DateTime? DeletedAt { get; set; }
+    public int SeasonId { get; set; }
+
+    public Episode? NextEpisode { get; set; }
+    public Season Season { get; set; } = null!;
+
+    public List<EpisodePlayer> Players { get; set; } = new List<EpisodePlayer>();
+    public List<EpisodeSubtitle> Subtitles { get; set; } = new List<EpisodeSubtitle>();
+    public List<WatchingHistory> WatchingHistories { get; set; } = new List<WatchingHistory>();
 }

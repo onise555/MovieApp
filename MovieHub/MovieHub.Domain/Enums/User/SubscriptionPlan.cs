@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MovieHub.Domain.Enums.User
+﻿public enum SubscriptionPlan
 {
-    internal class SubscriptionPlan
-    {
-    }
+    Free = 1,
+    Basic = 2,
+    Standard = 3,
+    Premium = 4,    
 }

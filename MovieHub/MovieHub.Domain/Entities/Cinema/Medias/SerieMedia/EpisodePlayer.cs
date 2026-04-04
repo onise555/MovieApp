@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MovieHub.Domain.Common;
+using MovieHub.Domain.Entities.Cinema.Series;
+using MovieHub.Domain.Entities.Features;
 
-namespace MovieHub.Domain.Entities.Cinema.Medias.SerieMedia
+public class EpisodePlayer : BaseEntity
 {
-    internal class EpisodePlayer
-    {
-    }
+    public string Url { get; set; } = string.Empty;
+    public VideoQuality Quality { get; set; } = VideoQuality.FullHD;
+    public bool IsDefault { get; set; } = false;
+    public int EpisodeId { get; set; }
+    public int LanguageId { get; set; }
+    public Episode Episode { get; set; } = null!;
+    public Language Language { get; set; } = null!;
 }

@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MovieHub.Domain.Common;
+using MovieHub.Domain.Entities.Cinema.Movies;
+using MovieHub.Domain.Entities.Features;
 
-namespace MovieHub.Domain.Entities.Cinema.Medias
+public class MovieSubtitle : BaseEntity
 {
-    internal class MovieSubtitle
-    {
-    }
+    public string Url { get; set; } = string.Empty;
+    public bool IsDefault { get; set; } = false;
+    public int MovieDetailId { get; set; }
+    public int LanguageId { get; set; }
+    public MovieDetail MovieDetail { get; set; } = null!;
+    public Language Language { get; set; } = null!;
 }

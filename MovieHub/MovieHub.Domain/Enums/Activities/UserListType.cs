@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MovieHub.Domain.Enums.Activities
+﻿public enum UserListType
 {
-    internal class UserListType
-    {
-    }
+    Watchlist = 1,
+    Favorites = 2,
+    Watched= 3,
 }

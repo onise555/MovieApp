@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MovieHub.Domain.Enums.Cinema
+﻿public enum SeriesType
 {
-    internal class SeriesType
-    {
-    }
+    Series = 1,
+    Anime = 2,
+    AnimatedSeries = 3,
+    MiniSeries = 4,  
 }

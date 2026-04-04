@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MovieHub.Domain.Common;
+using MovieHub.Domain.Entities.Cinema.Series;
 
-namespace MovieHub.Domain.Entities.Cinema.Series
+public class SeriesDetail : BaseEntity
 {
-    internal class SeriesDetail
-    {
-    }
+    public string Description { get; set; } = string.Empty;
+    public string Director { get; set; } = string.Empty;
+    public int AvgEpisodeMinutes { get; set; }
+    public string? TrailerYoutubeKey { get; set; }
+    public int SeriesId { get; set; }
+
+    public Serie Series { get; set; } = null!;
+    public List<SeriesTrailer> Trailers { get; set; } = new List<SeriesTrailer>();
 }

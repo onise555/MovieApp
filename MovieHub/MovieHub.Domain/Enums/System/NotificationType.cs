@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MovieHub.Domain.Enums.System
+﻿public enum NotificationType
 {
-    internal class NotificationType
-    {
-    }
+    NewSeason = 1,
+    NewEpisode = 2,
+    ContentAdded =  3,
+    ContentPremium = 4,
+    ContentFree = 4,
+    System = 5  
 }

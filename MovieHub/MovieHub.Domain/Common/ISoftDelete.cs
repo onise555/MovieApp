@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+namespace MovieHub.Domain.Common;
 
-namespace MovieHub.Domain.Common
+public interface ISoftDelete
 {
-    internal class ISoftDelete
-    {
-    }
+    bool IsDeleted { get; set; }
+    DateTime? DeletedAt { get; set; }
 }
+

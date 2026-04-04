@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MovieHub.Domain.Common;
+using MovieHub.Domain.Entities.Cinema.Movies;
+using MovieHub.Domain.Entities.Cinema.Series;
 
-namespace MovieHub.Domain.Entities.Features
+namespace MovieHub.Domain.Entities.Features;
+
+public class ContentTag : BaseEntity
 {
-    internal class ContentTag
-    {
-    }
+    public string Name { get; set; } = string.Empty;
+    public bool IsMood { get; set; } = false;
+
+    public List<Movie> Movies { get; set; } =  new List<Movie>();
+    public List<Serie> Series { get; set; } = new List<Serie>();
 }

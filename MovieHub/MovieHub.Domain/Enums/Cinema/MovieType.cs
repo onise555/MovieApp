@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MovieHub.Domain.Enums.Cinema
+﻿public enum MovieType
 {
-    internal class MovieType
-    {
-    }
+    Movie = 1,
+    AnimeMovie = 2,
+    AnimatedMovie = 3,
+    Documentary = 4
 }

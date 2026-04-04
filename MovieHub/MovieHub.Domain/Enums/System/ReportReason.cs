@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MovieHub.Domain.Enums.System
+﻿public enum ReportReason
 {
-    internal class ReportReason
-    {
-    }
+    BrokenLink = 1, 
+    WrongSubtitle = 2,
+    WrongInfo = 3,
+    AudioIssue = 4,
+    Other = 5
 }
