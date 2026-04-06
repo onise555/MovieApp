@@ -12,11 +12,13 @@ public class Notification : BaseEntity
     public NotificationType Type { get; set; }
     public bool IsRead { get; set; } = false;
     public DateTime CreatedAt { get; set; }
-    public int UserId { get; set; }
-    public int? MovieId { get; set; }
-    public int? SeriesId { get; set; }
 
+    public int UserId { get; set; }
     public User User { get; set; } = null!;
+
+    public int? MovieId { get; set; }
     public Movie? Movie { get; set; }
+
+    public int? SeriesId { get; set; }
     public Serie? Series { get; set; }
 }

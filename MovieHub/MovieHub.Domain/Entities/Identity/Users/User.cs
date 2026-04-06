@@ -21,6 +21,7 @@ public class User : AuditableEntity, ISoftDelete
 
     public DateTime? LastLoginAt { get; set; }
 
+
     public UserSecurity Security { get; set; } = null!;
     public UserDetail? Detail { get; set; }
     public UserSubscription? Subscription { get; set; }

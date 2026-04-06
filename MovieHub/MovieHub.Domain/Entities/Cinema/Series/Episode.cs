@@ -18,12 +18,14 @@ public class Episode : AuditableEntity, ISoftDelete
     public int? IntroEndSeconds { get; set; }
     public int? OutroStartSeconds { get; set; }
     public int? OutroEndSeconds { get; set; }
-    public int? NextEpisodeId { get; set; }
     public bool IsDeleted { get; set; } = false;
     public DateTime? DeletedAt { get; set; }
-    public int SeasonId { get; set; }
 
+
+    public int? NextEpisodeId { get; set; }
     public Episode? NextEpisode { get; set; }
+
+    public int SeasonId { get; set; }
     public Season Season { get; set; } = null!;
 
     public List<EpisodePlayer> Players { get; set; } = new List<EpisodePlayer>();

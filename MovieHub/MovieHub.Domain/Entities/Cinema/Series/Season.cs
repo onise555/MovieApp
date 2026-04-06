@@ -10,8 +10,10 @@ public class Season : AuditableEntity, ISoftDelete
     public int ReleaseYear { get; set; }
     public bool IsDeleted { get; set; } = false;
     public DateTime? DeletedAt { get; set; }
-    public int SeriesId { get; set; }
 
+
+    public int SeriesId { get; set; }
     public Serie Series { get; set; } = null!;
+
     public List<Episode> Episodes { get; set; } = new List<Episode>();
 }

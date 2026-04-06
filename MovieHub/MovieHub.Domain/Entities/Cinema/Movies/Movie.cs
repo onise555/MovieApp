@@ -25,17 +25,20 @@ public class Movie : AuditableEntity, ISoftDelete
     public double PopularityScore { get; private set; } = 0;
     public string? ImdbId { get; set; }
     public int? TmdbId { get; set; }
-    public int? SequelId { get; set; }
-    public int? PrequelId { get; set; }
+
     public bool IsDeleted { get; set; } = false;
     public DateTime? DeletedAt { get; set; }
 
+    public int? SequelId { get; set; }
     public Movie? Sequel { get; set; }
+
+
+    public int? PrequelId { get; set; }
     public Movie? Prequel { get; set; }
 
     public MovieDetail Detail { get; set; } = null!;
     public List<UserListItem> UserListItems { get; set; } = new List<UserListItem>();
-    public List<Review> Reviews { get; set; } = [];
+    public List<Review> Reviews { get; set; } =  new List<Review>();
     public List<WatchingHistory> WatchingHistories { get; set; } = new List<WatchingHistory>();
     public List<ContentReport> Reports { get; set; } = new List<ContentReport>();
     public List<Actor> Actors { get; set; } = new List<Actor>();

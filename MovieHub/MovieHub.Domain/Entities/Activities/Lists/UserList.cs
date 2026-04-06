@@ -7,10 +7,12 @@ namespace MovieHub.Domain.Entities.Activities.Lists;
 public class UserList : AuditableEntity, ISoftDelete
 {
     public UserListType Type { get; set; }
-    public int UserId { get; set; }
+
     public bool IsDeleted { get; set; } = false;
     public DateTime? DeletedAt { get; set; }
 
+    public int UserId { get; set; }
     public User User { get; set; } = null!;
+
     public List<UserListItem> Items { get; set; } = new List<UserListItem>();
 }

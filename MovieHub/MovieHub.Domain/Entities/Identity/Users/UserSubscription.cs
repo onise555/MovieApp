@@ -10,6 +10,7 @@ public class UserSubscription : BaseEntity
     public DateTime ExpiresAt { get; set; }
     public bool IsActive { get; set; } = true;
     public int MaxDevices { get; set; } = 1;
+
     public int UserId { get; set; }
     public User User { get; set; } = null!;
 }

@@ -13,13 +13,17 @@ public class ContentReport : AuditableEntity, ISoftDelete
     public bool IsResolved { get; set; } = false;
     public bool IsDeleted { get; set; } = false;
     public DateTime? DeletedAt { get; set; }
-    public int UserId { get; set; }
-    public int? MovieId { get; set; }
-    public int? SeriesId { get; set; }
-    public int? EpisodeId { get; set; }
 
+
+    public int UserId { get; set; }
     public User User { get; set; } = null!;
+
+    public int? MovieId { get; set; }
     public Movie? Movie { get; set; }
+
+    public int? SeriesId { get; set; }
     public Serie? Series { get; set; }
+
+    public int? EpisodeId { get; set; }
     public Episode? Episode { get; set; }
 }
