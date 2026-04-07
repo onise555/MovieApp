@@ -1,12 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using MovieHub.Domain.Entities.Features;
 
-namespace MovieHub.Infrastructure.Persistence.Configurations.Features
+namespace MovieHub.Infrastructure.Persistence.Configurations.Features;
+
+public class ContentTagConfiguration : IEntityTypeConfiguration<ContentTag>
 {
-    public class ContentTagConfiguration
+
+    public void Configure(EntityTypeBuilder<ContentTag> builder)
+
     {
+        builder.ToTable("ContentTags");
+        builder.HasKey(t => t.Id);
+
+        builder.Property(t => t.Name).IsRequired().HasMaxLength(100);
+        builder.Property(t => t.IsMood).HasDefaultValue(false);
+        builder.HasIndex(t => t.Name).IsUnique();
     }
 }
