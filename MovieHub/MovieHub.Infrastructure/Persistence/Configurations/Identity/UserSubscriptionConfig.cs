@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using MovieHub.Domain.Entities.Identity.Users;
+
 
 namespace MovieHub.Infrastructure.Persistence.Configurations.Identity
 {
-    internal class UserSubscriptionConfig
+    public class UserSubscriptionConfig : IEntityTypeConfiguration<UserSubscription>
     {
+        public void Configure(EntityTypeBuilder<UserSubscription> builder)
+        {
+            builder.ToTable("UserSubscriptions");
+            builder.HasKey(s => s.Id);
+
+            builder.Property(s => s.Plan).IsRequired().HasConversion<int>().HasDefaultValue(0);
+            builder.Property(s => s.IsActive).HasDefaultValue(true);
+            builder.Property(s => s.MaxDevices).HasDefaultValue(1);
+            builder.Property(s => s.StartsAt).IsRequired();
+            builder.Property(s => s.ExpiresAt).IsRequired();
+        }
     }
 }

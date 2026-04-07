@@ -37,6 +37,10 @@ public class Movie : AuditableEntity, ISoftDelete
     public Movie? Prequel { get; set; }
 
     public MovieDetail Detail { get; set; } = null!;
+
+    public List<Language> DubbingLanguages { get; set; } = new List<Language>();
+    public List<Language> SubtitleLanguages { get; set; } = new List<Language>();
+
     public List<UserListItem> UserListItems { get; set; } = new List<UserListItem>();
     public List<Review> Reviews { get; set; } =  new List<Review>();
     public List<WatchingHistory> WatchingHistories { get; set; } = new List<WatchingHistory>();

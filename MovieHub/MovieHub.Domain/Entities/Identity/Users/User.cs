@@ -10,14 +10,14 @@ namespace MovieHub.Domain.Entities.Identity.Users;
 
 public class User : AuditableEntity, ISoftDelete
 {
-    public string FirstName { get; private set; } = string.Empty;
-    public string LastName { get; private set; } = string.Empty;
-    public string Email { get; private set; } = string.Empty;
-    public UserRole Role { get; private set; }
+    public string FirstName { get; set; } = string.Empty;
+    public string LastName { get; set; } = string.Empty;
+    public string Email { get;  set; } = string.Empty;
+    public UserRole Role { get; set; }
 
     public bool IsDeleted { get; set; } = false;
     public DateTime? DeletedAt { get; set; }
-    public bool IsActive { get; private set; } = true;
+    public bool IsActive { get;  set; } = true;
 
     public DateTime? LastLoginAt { get; set; }
 
