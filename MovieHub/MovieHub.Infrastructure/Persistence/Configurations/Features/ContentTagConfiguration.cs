@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MovieHub.Infrastructure.Persistence.Configurations.Features
 {
-    internal class ContentTagConfiguration
+    public class ContentTagConfiguration
     {
     }
 }
